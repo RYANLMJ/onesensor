@@ -36,10 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "swSend",
-					"strict" : false
-				},
-				{
 					"name" : "eoc",
 					"strict" : false
 				},
@@ -48,23 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "adc_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[5]",
+					"name" : "adc_data[7]",
 					"strict" : false
 				},
 				{
@@ -72,7 +52,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "adc_data[7]",
+					"name" : "adc_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[1]",
 					"strict" : false
 				}
 			]

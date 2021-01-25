@@ -1,4 +1,4 @@
-module tx_sys(eoc, adc_data, adc_clock, start, ale, oe, address, reset, clock, swSend, txPin, ready);
+module tx_sys(eoc, adc_data, adc_clock, start, ale, oe, address, reset, clock, txPin, ready);
 
  input eoc;
  integer selectInput=3'b000;
@@ -12,14 +12,24 @@ module tx_sys(eoc, adc_data, adc_clock, start, ale, oe, address, reset, clock, s
  adc_Controller U6(reset, clock, adc_clock, selectInput, eoc, adc_data, start, ale, oe, address, out_data);
 
  
- input reset, clock, swSend;
+ input reset, clock;
  output txPin, ready;
  
  wire [7:0] data;
- wire rst, sendCmd, thirtyEightKHz; 
+ wire rst, thirtyEightKHz; 
+ reg swSend=0;
  
  assign rst=~reset;
  assign data=out_data;
+ 
+
+always @(posedge thirtyEightKHz) 
+ begin
+ if (data == 8'b00000000)
+  swSend = 0;
+ else
+  swSend = 1; 
+ end
  
  freq38K U4(rst, clock, thirtyEightKHz);
  uart_tx U5(rst, thirtyEightKHz, swSend, data, txPin, ready);
