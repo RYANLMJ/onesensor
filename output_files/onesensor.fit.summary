@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Jan 25 16:07:28 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : onesensor
+Top-level Entity Name : tx_sys
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 315 / 6,272 ( 5 % )
+    Total combinational functions : 294 / 6,272 ( 5 % )
+    Dedicated logic registers : 232 / 6,272 ( 4 % )
+Total registers : 232
+Total pins : 21 / 92 ( 23 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

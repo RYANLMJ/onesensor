@@ -1,0 +1,13 @@
+module tx_sys(restart, clock, swSend, txPin, ready);
+ input restart, clock, swSend;
+ output txPin, ready;
+ 
+ wire reset, sendCmd, hundredHz, thirtyEightKHz;
+ wire [7:0] data=8'b01000001; 
+ 
+ assign reset=~restart;
+ freq100 U1(reset, clock, hundredHz);
+ debouncer U2(hundredHz, swSend, sendCmd);
+ freq38K U3(reset, clock, thirtyEightKHz);
+ uart_tx U4(reset, thirtyEightKHz, sendCmd, data, txPin, ready);
+ endmodule 

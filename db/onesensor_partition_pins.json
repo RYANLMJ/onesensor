@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "adc_clock",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "ale",
+					"strict" : false
+				},
+				{
+					"name" : "oe",
+					"strict" : false
+				},
+				{
+					"name" : "txPin",
+					"strict" : false
+				},
+				{
+					"name" : "ready",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "swSend",
+					"strict" : false
+				},
+				{
+					"name" : "eoc",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
