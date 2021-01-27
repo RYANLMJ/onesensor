@@ -23,6 +23,7 @@ module tx_sys(eoc, adc_data, adc_clock, start, ale, oe, address, reset, clock, t
  assign data=out_data;
  
 
+
 always @(posedge clock) 
  begin
 	if (data == 8'b00000000)

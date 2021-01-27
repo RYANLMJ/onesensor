@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Jan 27 12:03:09 2021
+Analysis & Synthesis Status : Successful - Wed Jan 27 14:36:27 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : onesensor
-Top-level Entity Name : tx_sys
+Top-level Entity Name : onesensor
 Family : Cyclone IV E
-Total logic elements : 313
-    Total combinational functions : 295
-    Dedicated logic registers : 232
-Total registers : 232
+Total logic elements : 226
+    Total combinational functions : 207
+    Dedicated logic registers : 162
+Total registers : 162
 Total pins : 19
 Total virtual pins : 0
 Total memory bits : 0

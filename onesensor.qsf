@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6E22C8
-set_global_assignment -name TOP_LEVEL_ENTITY tx_sys
+set_global_assignment -name TOP_LEVEL_ENTITY onesensor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:41:49  JANUARY 25, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -62,9 +62,6 @@ set_global_assignment -name VERILOG_FILE genStart.v
 set_global_assignment -name VERILOG_FILE uart_tx.v
 set_global_assignment -name VERILOG_FILE freq38K.v
 set_global_assignment -name VERILOG_FILE tx_sys.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_121 -to adc_clock
 set_location_assignment PIN_66 -to adc_data[7]
 set_location_assignment PIN_67 -to adc_data[6]
@@ -84,6 +81,11 @@ set_location_assignment PIN_119 -to oe
 set_location_assignment PIN_91 -to reset
 set_location_assignment PIN_115 -to start
 set_location_assignment PIN_64 -to txPin
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE UART_rs232_rx.v
 set_global_assignment -name VERILOG_FILE UART_BaudRate_generator.v
+set_global_assignment -name VERILOG_FILE UART_rs232_tx.v
+set_global_assignment -name VERILOG_FILE onesensor.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

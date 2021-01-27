@@ -44,19 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "adc_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "adc_data[4]",
+					"name" : "adc_data[2]",
 					"strict" : false
 				},
 				{
@@ -64,7 +52,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "adc_data[2]",
+					"name" : "adc_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_data[7]",
 					"strict" : false
 				}
 			]

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for onesensor
-Wed Jan 27 12:03:09 2021
+Wed Jan 27 14:36:27 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,20 +13,22 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|n_state
-  9. State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|p_state
+  8. State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|n_state
+  9. State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|p_state
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: adc_Controller:U6|adcFSM:U3
- 15. Parameter Settings for User Entity Instance: uart_tx:U5
- 16. Port Connectivity Checks: "uart_tx:U5"
- 17. Port Connectivity Checks: "adc_Controller:U6|freqADC:U1"
- 18. Port Connectivity Checks: "adc_Controller:U6"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: adc_Controller:U16|adcFSM:U3
+ 15. Parameter Settings for User Entity Instance: UART_rs232_tx:U17
+ 16. Port Connectivity Checks: "UART_BaudRate_generator:U18"
+ 17. Port Connectivity Checks: "UART_rs232_tx:U17"
+ 18. Port Connectivity Checks: "adc_Controller:U16|freqADC:U1"
+ 19. Port Connectivity Checks: "adc_Controller:U16"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,15 +55,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 27 12:03:09 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 27 14:36:27 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; onesensor                                   ;
-; Top-level Entity Name              ; tx_sys                                      ;
+; Top-level Entity Name              ; onesensor                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 313                                         ;
-;     Total combinational functions  ; 295                                         ;
-;     Dedicated logic registers      ; 232                                         ;
-; Total registers                    ; 232                                         ;
+; Total logic elements               ; 226                                         ;
+;     Total combinational functions  ; 207                                         ;
+;     Dedicated logic registers      ; 162                                         ;
+; Total registers                    ; 162                                         ;
 ; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -76,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; tx_sys             ; onesensor          ;
+; Top-level entity name                                            ; onesensor          ; onesensor          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -169,24 +171,23 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; adcFSM.v                         ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/adcFSM.v         ;         ;
-; adc_Controller.v                 ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/adc_Controller.v ;         ;
-; freqADC.v                        ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/freqADC.v        ;         ;
-; genStart.v                       ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/genStart.v       ;         ;
-; uart_tx.v                        ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/uart_tx.v        ;         ;
-; freq38K.v                        ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/freq38K.v        ;         ;
-; tx_sys.v                         ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/tx_sys.v         ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; adcFSM.v                         ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/adcFSM.v                  ;         ;
+; adc_Controller.v                 ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/adc_Controller.v          ;         ;
+; freqADC.v                        ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/freqADC.v                 ;         ;
+; genStart.v                       ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/genStart.v                ;         ;
+; UART_BaudRate_generator.v        ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/UART_BaudRate_generator.v ;         ;
+; UART_rs232_tx.v                  ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/UART_rs232_tx.v           ;         ;
+; onesensor.v                      ; yes             ; User Verilog HDL File  ; C:/Intel/design/onesensor/onesensor.v               ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -194,20 +195,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 313         ;
+; Estimated Total logic elements              ; 226         ;
 ;                                             ;             ;
-; Total combinational functions               ; 295         ;
+; Total combinational functions               ; 207         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 76          ;
-;     -- 3 input functions                    ; 14          ;
-;     -- <=2 input functions                  ; 205         ;
+;     -- 4 input functions                    ; 56          ;
+;     -- 3 input functions                    ; 18          ;
+;     -- <=2 input functions                  ; 133         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 109         ;
-;     -- arithmetic mode                      ; 186         ;
+;     -- normal mode                          ; 95          ;
+;     -- arithmetic mode                      ; 112         ;
 ;                                             ;             ;
-; Total registers                             ; 232         ;
-;     -- Dedicated logic registers            ; 232         ;
+; Total registers                             ; 162         ;
+;     -- Dedicated logic registers            ; 162         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 19          ;
@@ -215,31 +216,31 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 151         ;
-; Total fan-out                               ; 1623        ;
-; Average fan-out                             ; 2.87        ;
+; Maximum fan-out                             ; 102         ;
+; Total fan-out                               ; 1133        ;
+; Average fan-out                             ; 2.78        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
-; |tx_sys                    ; 295 (3)             ; 232 (1)                   ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |tx_sys                               ; tx_sys         ; work         ;
-;    |adc_Controller:U6|     ; 148 (0)             ; 122 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6             ; adc_Controller ; work         ;
-;       |adcFSM:U3|          ; 64 (64)             ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|adcFSM:U3   ; adcFSM         ; work         ;
-;       |freqADC:U1|         ; 43 (43)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|freqADC:U1  ; freqADC        ; work         ;
-;       |genStart:U2|        ; 41 (41)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|genStart:U2 ; genStart       ; work         ;
-;    |freq38K:U4|            ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|freq38K:U4                    ; freq38K        ; work         ;
-;    |uart_tx:U5|            ; 100 (100)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|uart_tx:U5                    ; uart_tx        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name             ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------------------+--------------+
+; |onesensor                       ; 207 (1)             ; 162 (0)                   ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |onesensor                                ; onesensor               ; work         ;
+;    |UART_BaudRate_generator:U18| ; 21 (21)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|UART_BaudRate_generator:U18    ; UART_BaudRate_generator ; work         ;
+;    |UART_rs232_tx:U17|           ; 37 (37)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|UART_rs232_tx:U17              ; UART_rs232_tx           ; work         ;
+;    |adc_Controller:U16|          ; 148 (0)             ; 122 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|adc_Controller:U16             ; adc_Controller          ; work         ;
+;       |adcFSM:U3|                ; 64 (64)             ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|adc_Controller:U16|adcFSM:U3   ; adcFSM                  ; work         ;
+;       |freqADC:U1|               ; 43 (43)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|adc_Controller:U16|freqADC:U1  ; freqADC                 ; work         ;
+;       |genStart:U2|              ; 41 (41)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |onesensor|adc_Controller:U16|genStart:U2 ; genStart                ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|n_state                                                                  ;
+; State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|n_state                                                              ;
 +--------------------+-----------------+--------------+--------------------+-----------------+------------------+--------------+
 ; Name               ; n_state.reading ; n_state.done ; n_state.converting ; n_state.waiting ; n_state.starting ; n_state.idle ;
 +--------------------+-----------------+--------------+--------------------+-----------------+------------------+--------------+
@@ -254,7 +255,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|p_state                                                                  ;
+; State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|p_state                                                              ;
 +--------------------+-----------------+--------------+--------------------+-----------------+------------------+--------------+
 ; Name               ; p_state.reading ; p_state.done ; p_state.converting ; p_state.waiting ; p_state.starting ; p_state.idle ;
 +--------------------+-----------------+--------------+--------------------+-----------------+------------------+--------------+
@@ -267,19 +268,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------------+--------------+--------------------+-----------------+------------------+--------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; adc_Controller:U6|adcFSM:U3|n_state~2 ; Lost fanout        ;
-; adc_Controller:U6|adcFSM:U3|n_state~3 ; Lost fanout        ;
-; adc_Controller:U6|adcFSM:U3|n_state~4 ; Lost fanout        ;
-; adc_Controller:U6|adcFSM:U3|p_state~4 ; Lost fanout        ;
-; adc_Controller:U6|adcFSM:U3|p_state~5 ; Lost fanout        ;
-; adc_Controller:U6|adcFSM:U3|p_state~6 ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; adc_Controller:U16|adcFSM:U3|n_state~2 ; Lost fanout        ;
+; adc_Controller:U16|adcFSM:U3|n_state~3 ; Lost fanout        ;
+; adc_Controller:U16|adcFSM:U3|n_state~4 ; Lost fanout        ;
+; adc_Controller:U16|adcFSM:U3|p_state~4 ; Lost fanout        ;
+; adc_Controller:U16|adcFSM:U3|p_state~5 ; Lost fanout        ;
+; adc_Controller:U16|adcFSM:U3|p_state~6 ; Lost fanout        ;
+; Total Number of Removed Registers = 6  ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -287,75 +288,90 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 232   ;
-; Number of registers using Synchronous Clear  ; 192   ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 150   ;
+; Total registers                              ; 162   ;
+; Number of registers using Synchronous Clear  ; 98    ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 101   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; uart_tx:U5|txPin                       ; 2       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++------------------------------------------------------+
+; Inverted Register Statistics                         ;
++--------------------------------------------+---------+
+; Inverted Register                          ; Fan out ;
++--------------------------------------------+---------+
+; UART_BaudRate_generator:U18|baudRateReg[0] ; 2       ;
+; UART_rs232_tx:U17|start_bit                ; 5       ;
+; Total number of inverted registers = 2     ;         ;
++--------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |tx_sys|uart_tx:U5|cntBit[23]                 ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |tx_sys|uart_tx:U5|txBuffer[1]                ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |tx_sys|adc_Controller:U6|adcFSM:U3|Selector3 ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |tx_sys|adc_Controller:U6|adcFSM:U3|Selector2 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |onesensor|UART_rs232_tx:U17|in_data[1]           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |onesensor|UART_rs232_tx:U17|Bit[4]               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |onesensor|UART_rs232_tx:U17|counter[2]           ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |onesensor|adc_Controller:U16|adcFSM:U3|Selector1 ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |onesensor|adc_Controller:U16|adcFSM:U3|Selector2 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adc_Controller:U6|adcFSM:U3 ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; idle           ; 000   ; Unsigned Binary                                 ;
-; starting       ; 001   ; Unsigned Binary                                 ;
-; waiting        ; 010   ; Unsigned Binary                                 ;
-; converting     ; 011   ; Unsigned Binary                                 ;
-; done           ; 100   ; Unsigned Binary                                 ;
-; reading        ; 101   ; Unsigned Binary                                 ;
-+----------------+-------+-------------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adc_Controller:U16|adcFSM:U3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; idle           ; 000   ; Unsigned Binary                                  ;
+; starting       ; 001   ; Unsigned Binary                                  ;
+; waiting        ; 010   ; Unsigned Binary                                  ;
+; converting     ; 011   ; Unsigned Binary                                  ;
+; done           ; 100   ; Unsigned Binary                                  ;
+; reading        ; 101   ; Unsigned Binary                                  ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_tx:U5 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; waiting        ; 0     ; Unsigned Binary                ;
-; sending        ; 1     ; Unsigned Binary                ;
-+----------------+-------+--------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_rs232_tx:U17 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; IDLE           ; 0     ; Unsigned Binary                       ;
+; WRITE          ; 1     ; Unsigned Binary                       ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_tx:U5"                                                                          ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_BaudRate_generator:U18"                                                                                                                          ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; BaudRate ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "BaudRate[15..1]" will be connected to GND. ;
+; BaudRate ; Input ; Info     ; Stuck at VCC                                                                                                                                       ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_rs232_tx:U17"                                                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; TxEn        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; TxDone      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; NBits[2..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; NBits[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adc_Controller:U6|freqADC:U1"                                                                                                                                                          ;
+; Port Connectivity Checks: "adc_Controller:U16|freqADC:U1"                                                                                                                                                         ;
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -364,13 +380,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "adc_Controller:U6" ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; selectInput ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "adc_Controller:U16" ;
++-------------+-------+----------+---------------+
+; Port        ; Type  ; Severity ; Details       ;
++-------------+-------+----------+---------------+
+; selectInput ; Input ; Info     ; Stuck at GND  ;
++-------------+-------+----------+---------------+
 
 
 +-----------------------------------------------------+
@@ -379,26 +395,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 19                          ;
-; cycloneiii_ff         ; 232                         ;
-;     CLR               ; 21                          ;
-;     CLR SCLR          ; 96                          ;
-;     CLR SLD           ; 1                           ;
-;     ENA               ; 10                          ;
-;     ENA CLR SCLR      ; 32                          ;
-;     SCLR              ; 64                          ;
-;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 297                         ;
-;     arith             ; 186                         ;
-;         2 data inputs ; 186                         ;
-;     normal            ; 111                         ;
+; cycloneiii_ff         ; 162                         ;
+;     CLR               ; 20                          ;
+;     CLR SCLR          ; 64                          ;
+;     CLR SLD           ; 17                          ;
+;     ENA               ; 18                          ;
+;     SCLR              ; 34                          ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 207                         ;
+;     arith             ; 112                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 111                         ;
+;     normal            ; 95                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 13                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 76                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 56                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.53                        ;
+; Average LUT depth     ; 3.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -417,7 +433,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Jan 27 12:02:48 2021
+    Info: Processing started: Wed Jan 27 14:36:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off onesensor -c onesensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -435,32 +451,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file freq38k
     Info (12023): Found entity 1: freq38K File: C:/Intel/design/onesensor/freq38K.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tx_sys.v
     Info (12023): Found entity 1: tx_sys File: C:/Intel/design/onesensor/tx_sys.v Line: 1
-Info (12127): Elaborating entity "tx_sys" for the top level hierarchy
-Info (12128): Elaborating entity "adc_Controller" for hierarchy "adc_Controller:U6" File: C:/Intel/design/onesensor/tx_sys.v Line: 12
-Info (12128): Elaborating entity "freqADC" for hierarchy "adc_Controller:U6|freqADC:U1" File: C:/Intel/design/onesensor/adc_Controller.v Line: 15
-Info (12128): Elaborating entity "genStart" for hierarchy "adc_Controller:U6|genStart:U2" File: C:/Intel/design/onesensor/adc_Controller.v Line: 16
-Info (12128): Elaborating entity "adcFSM" for hierarchy "adc_Controller:U6|adcFSM:U3" File: C:/Intel/design/onesensor/adc_Controller.v Line: 17
-Info (12128): Elaborating entity "freq38K" for hierarchy "freq38K:U4" File: C:/Intel/design/onesensor/tx_sys.v Line: 35
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:U5" File: C:/Intel/design/onesensor/tx_sys.v Line: 36
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Intel/design/onesensor/uart_tx.v Line: 5
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rs232_rx.v
+    Info (12023): Found entity 1: UART_rs232_rx File: C:/Intel/design/onesensor/UART_rs232_rx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file uart_baudrate_generator.v
+    Info (12023): Found entity 1: UART_BaudRate_generator File: C:/Intel/design/onesensor/UART_BaudRate_generator.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rs232_tx.v
+    Info (12023): Found entity 1: UART_rs232_tx File: C:/Intel/design/onesensor/UART_rs232_tx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file onesensor.v
+    Info (12023): Found entity 1: onesensor File: C:/Intel/design/onesensor/onesensor.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at onesensor.v(22): created implicit net for "RxEn" File: C:/Intel/design/onesensor/onesensor.v Line: 22
+Info (12127): Elaborating entity "onesensor" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at onesensor.v(22): object "RxEn" assigned a value but never read File: C:/Intel/design/onesensor/onesensor.v Line: 22
+Warning (10230): Verilog HDL assignment warning at onesensor.v(24): truncated value with size 16 to match size of target (1) File: C:/Intel/design/onesensor/onesensor.v Line: 24
+Info (12128): Elaborating entity "adc_Controller" for hierarchy "adc_Controller:U16" File: C:/Intel/design/onesensor/onesensor.v Line: 12
+Info (12128): Elaborating entity "freqADC" for hierarchy "adc_Controller:U16|freqADC:U1" File: C:/Intel/design/onesensor/adc_Controller.v Line: 15
+Info (12128): Elaborating entity "genStart" for hierarchy "adc_Controller:U16|genStart:U2" File: C:/Intel/design/onesensor/adc_Controller.v Line: 16
+Info (12128): Elaborating entity "adcFSM" for hierarchy "adc_Controller:U16|adcFSM:U3" File: C:/Intel/design/onesensor/adc_Controller.v Line: 17
+Info (12128): Elaborating entity "UART_rs232_tx" for hierarchy "UART_rs232_tx:U17" File: C:/Intel/design/onesensor/onesensor.v Line: 31
+Warning (10230): Verilog HDL assignment warning at UART_rs232_tx.v(104): truncated value with size 32 to match size of target (4) File: C:/Intel/design/onesensor/UART_rs232_tx.v Line: 104
+Warning (10230): Verilog HDL assignment warning at UART_rs232_tx.v(124): truncated value with size 32 to match size of target (5) File: C:/Intel/design/onesensor/UART_rs232_tx.v Line: 124
+Info (12128): Elaborating entity "UART_BaudRate_generator" for hierarchy "UART_BaudRate_generator:U18" File: C:/Intel/design/onesensor/onesensor.v Line: 32
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "address[0]" is stuck at GND File: C:/Intel/design/onesensor/tx_sys.v Line: 8
-    Warning (13410): Pin "address[1]" is stuck at GND File: C:/Intel/design/onesensor/tx_sys.v Line: 8
-    Warning (13410): Pin "address[2]" is stuck at GND File: C:/Intel/design/onesensor/tx_sys.v Line: 8
+    Warning (13410): Pin "address[0]" is stuck at GND File: C:/Intel/design/onesensor/onesensor.v Line: 8
+    Warning (13410): Pin "address[1]" is stuck at GND File: C:/Intel/design/onesensor/onesensor.v Line: 8
+    Warning (13410): Pin "address[2]" is stuck at GND File: C:/Intel/design/onesensor/onesensor.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Intel/design/onesensor/output_files/onesensor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 333 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 314 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Wed Jan 27 12:03:09 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:48
+    Info (21061): Implemented 227 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Wed Jan 27 14:36:27 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:50
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Intel/design/onesensor/output_files/onesensor.map.smsg.
 
 

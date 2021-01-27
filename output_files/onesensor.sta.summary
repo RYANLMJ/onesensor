@@ -2,160 +2,124 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -5.108
-TNS   : -360.550
-
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -4.775
-TNS   : -242.724
+Slack : -4.246
+TNS   : -168.949
 
-Type  : Slow 1200mV 85C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -3.811
-TNS   : -231.705
+Type  : Slow 1200mV 85C Model Setup 'adc_Controller:U16|freqADC:U1|adc_clock'
+Slack : -3.565
+TNS   : -227.841
 
-Type  : Slow 1200mV 85C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : 0.433
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : -2.875
+TNS   : -47.011
 
-Type  : Slow 1200mV 85C Model Hold 'freq38K:U4|thirtyEightKHz'
-Slack : 0.454
+Type  : Slow 1200mV 85C Model Hold 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : -0.385
+TNS   : -3.276
+
+Type  : Slow 1200mV 85C Model Hold 'adc_Controller:U16|freqADC:U1|adc_clock'
+Slack : 0.434
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.740
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'swSend'
-Slack : -2.067
-TNS   : -2.067
-
-Type  : Slow 1200mV 85C Model Removal 'swSend'
-Slack : 2.512
+Slack : 0.759
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -102.629
+TNS   : -80.324
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U16|freqADC:U1|adc_clock'
 Slack : -1.487
 TNS   : -120.447
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_BaudRate_generator:U18|baudRateReg[0]'
 Slack : -1.487
-TNS   : -111.525
+TNS   : -31.227
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U16|adcFSM:U3|readData'
 Slack : -1.487
 TNS   : -11.896
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'swSend'
-Slack : -1.487
-TNS   : -1.487
-
-Type  : Slow 1200mV 0C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -4.728
-TNS   : -331.322
-
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -4.469
-TNS   : -224.029
+Slack : -3.951
+TNS   : -155.237
 
-Type  : Slow 1200mV 0C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -3.524
-TNS   : -212.300
+Type  : Slow 1200mV 0C Model Setup 'adc_Controller:U16|freqADC:U1|adc_clock'
+Slack : -3.306
+TNS   : -210.148
 
-Type  : Slow 1200mV 0C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
+Type  : Slow 1200mV 0C Model Setup 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : -2.623
+TNS   : -41.953
+
+Type  : Slow 1200mV 0C Model Hold 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : -0.350
+TNS   : -2.925
+
+Type  : Slow 1200mV 0C Model Hold 'adc_Controller:U16|freqADC:U1|adc_clock'
 Slack : 0.383
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'freq38K:U4|thirtyEightKHz'
-Slack : 0.402
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.692
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'swSend'
-Slack : -1.732
-TNS   : -1.732
-
-Type  : Slow 1200mV 0C Model Removal 'swSend'
-Slack : 2.271
+Slack : 0.704
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -102.629
+TNS   : -80.324
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U16|freqADC:U1|adc_clock'
 Slack : -1.487
 TNS   : -120.447
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_BaudRate_generator:U18|baudRateReg[0]'
 Slack : -1.487
-TNS   : -111.525
+TNS   : -31.227
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U16|adcFSM:U3|readData'
 Slack : -1.487
 TNS   : -11.896
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'swSend'
-Slack : -1.487
-TNS   : -1.487
-
-Type  : Fast 1200mV 0C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -1.611
-TNS   : -110.371
-
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.483
-TNS   : -59.099
+Slack : -1.256
+TNS   : -41.162
 
-Type  : Fast 1200mV 0C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -1.049
-TNS   : -53.220
+Type  : Fast 1200mV 0C Model Setup 'adc_Controller:U16|freqADC:U1|adc_clock'
+Slack : -0.950
+TNS   : -51.913
 
-Type  : Fast 1200mV 0C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : 0.179
+Type  : Fast 1200mV 0C Model Setup 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : -0.696
+TNS   : -9.225
+
+Type  : Fast 1200mV 0C Model Hold 'UART_BaudRate_generator:U18|baudRateReg[0]'
+Slack : 0.111
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'freq38K:U4|thirtyEightKHz'
-Slack : 0.187
+Type  : Fast 1200mV 0C Model Hold 'adc_Controller:U16|freqADC:U1|adc_clock'
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.296
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'swSend'
-Slack : -0.442
-TNS   : -0.442
-
-Type  : Fast 1200mV 0C Model Removal 'swSend'
-Slack : 1.152
+Slack : 0.302
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -74.351
+TNS   : -58.196
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U16|freqADC:U1|adc_clock'
 Slack : -1.000
 TNS   : -81.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_BaudRate_generator:U18|baudRateReg[0]'
 Slack : -1.000
-TNS   : -75.000
+TNS   : -21.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U16|adcFSM:U3|readData'
 Slack : -1.000
 TNS   : -8.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'swSend'
-Slack : -1.000
-TNS   : -1.000
 
 ------------------------------------------------------------
