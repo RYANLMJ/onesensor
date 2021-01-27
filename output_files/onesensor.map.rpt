@@ -1,5 +1,5 @@
 Analysis & Synthesis report for onesensor
-Mon Jan 25 17:22:24 2021
+Wed Jan 27 12:03:09 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -21,11 +21,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: adc_Controller:U6|adcFSM:U3
  15. Parameter Settings for User Entity Instance: uart_tx:U5
- 16. Port Connectivity Checks: "adc_Controller:U6|freqADC:U1"
- 17. Port Connectivity Checks: "adc_Controller:U6"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 16. Port Connectivity Checks: "uart_tx:U5"
+ 17. Port Connectivity Checks: "adc_Controller:U6|freqADC:U1"
+ 18. Port Connectivity Checks: "adc_Controller:U6"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -52,16 +53,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 25 17:22:24 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 27 12:03:09 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; onesensor                                   ;
 ; Top-level Entity Name              ; tx_sys                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 314                                         ;
-;     Total combinational functions  ; 296                                         ;
-;     Dedicated logic registers      ; 233                                         ;
-; Total registers                    ; 233                                         ;
-; Total pins                         ; 20                                          ;
+; Total logic elements               ; 313                                         ;
+;     Total combinational functions  ; 295                                         ;
+;     Dedicated logic registers      ; 232                                         ;
+; Total registers                    ; 232                                         ;
+; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -193,29 +194,29 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 314         ;
+; Estimated Total logic elements              ; 313         ;
 ;                                             ;             ;
-; Total combinational functions               ; 296         ;
+; Total combinational functions               ; 295         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 77          ;
+;     -- 4 input functions                    ; 76          ;
 ;     -- 3 input functions                    ; 14          ;
 ;     -- <=2 input functions                  ; 205         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 110         ;
+;     -- normal mode                          ; 109         ;
 ;     -- arithmetic mode                      ; 186         ;
 ;                                             ;             ;
-; Total registers                             ; 233         ;
-;     -- Dedicated logic registers            ; 233         ;
+; Total registers                             ; 232         ;
+;     -- Dedicated logic registers            ; 232         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 20          ;
+; I/O pins                                    ; 19          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 152         ;
-; Total fan-out                               ; 1631        ;
+; Maximum fan-out                             ; 151         ;
+; Total fan-out                               ; 1623        ;
 ; Average fan-out                             ; 2.87        ;
 +---------------------------------------------+-------------+
 
@@ -225,13 +226,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
-; |tx_sys                    ; 296 (3)             ; 233 (1)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |tx_sys                               ; tx_sys         ; work         ;
+; |tx_sys                    ; 295 (3)             ; 232 (1)                   ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |tx_sys                               ; tx_sys         ; work         ;
 ;    |adc_Controller:U6|     ; 148 (0)             ; 122 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6             ; adc_Controller ; work         ;
 ;       |adcFSM:U3|          ; 64 (64)             ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|adcFSM:U3   ; adcFSM         ; work         ;
 ;       |freqADC:U1|         ; 43 (43)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|freqADC:U1  ; freqADC        ; work         ;
 ;       |genStart:U2|        ; 41 (41)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|adc_Controller:U6|genStart:U2 ; genStart       ; work         ;
 ;    |freq38K:U4|            ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|freq38K:U4                    ; freq38K        ; work         ;
-;    |uart_tx:U5|            ; 101 (101)           ; 77 (77)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|uart_tx:U5                    ; uart_tx        ; work         ;
+;    |uart_tx:U5|            ; 100 (100)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_sys|uart_tx:U5                    ; uart_tx        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -286,7 +287,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 233   ;
+; Total registers                              ; 232   ;
 ; Number of registers using Synchronous Clear  ; 192   ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 150   ;
@@ -344,6 +345,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_tx:U5"                                                                          ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "adc_Controller:U6|freqADC:U1"                                                                                                                                                          ;
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -368,27 +378,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 233                         ;
+; boundary_port         ; 19                          ;
+; cycloneiii_ff         ; 232                         ;
 ;     CLR               ; 21                          ;
 ;     CLR SCLR          ; 96                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 10                          ;
 ;     ENA CLR SCLR      ; 32                          ;
 ;     SCLR              ; 64                          ;
-;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 298                         ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 297                         ;
 ;     arith             ; 186                         ;
 ;         2 data inputs ; 186                         ;
-;     normal            ; 112                         ;
+;     normal            ; 111                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 14                          ;
-;         4 data inputs ; 77                          ;
+;         4 data inputs ; 76                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.52                        ;
+; Average LUT depth     ; 3.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -407,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jan 25 17:22:04 2021
+    Info: Processing started: Wed Jan 27 12:02:48 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off onesensor -c onesensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -430,8 +440,8 @@ Info (12128): Elaborating entity "adc_Controller" for hierarchy "adc_Controller:
 Info (12128): Elaborating entity "freqADC" for hierarchy "adc_Controller:U6|freqADC:U1" File: C:/Intel/design/onesensor/adc_Controller.v Line: 15
 Info (12128): Elaborating entity "genStart" for hierarchy "adc_Controller:U6|genStart:U2" File: C:/Intel/design/onesensor/adc_Controller.v Line: 16
 Info (12128): Elaborating entity "adcFSM" for hierarchy "adc_Controller:U6|adcFSM:U3" File: C:/Intel/design/onesensor/adc_Controller.v Line: 17
-Info (12128): Elaborating entity "freq38K" for hierarchy "freq38K:U4" File: C:/Intel/design/onesensor/tx_sys.v Line: 34
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:U5" File: C:/Intel/design/onesensor/tx_sys.v Line: 35
+Info (12128): Elaborating entity "freq38K" for hierarchy "freq38K:U4" File: C:/Intel/design/onesensor/tx_sys.v Line: 35
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:U5" File: C:/Intel/design/onesensor/tx_sys.v Line: 36
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/Intel/design/onesensor/uart_tx.v Line: 5
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -443,14 +453,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 335 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 333 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 315 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 314 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Mon Jan 25 17:22:24 2021
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Wed Jan 27 12:03:09 2021
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:48
 
 

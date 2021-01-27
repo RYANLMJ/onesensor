@@ -16,10 +16,9 @@ address[0] <= adc_Controller:U6.address[0]
 address[1] <= adc_Controller:U6.address[1]
 address[2] <= adc_Controller:U6.address[2]
 reset => adc_Controller:U6.reset
-reset => rst.IN1
+reset => rst.IN2
 clock => clock.IN1
-txPin <= uart_tx:U5.txPin
-ready <= uart_tx:U5.ready
+txPin <= uart_tx:U5.port4
 
 
 |tx_sys|adc_Controller:U6

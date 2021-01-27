@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -5.186
-TNS   : -340.449
+Slack : -5.108
+TNS   : -360.550
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -4.445
-TNS   : -234.246
+Slack : -4.775
+TNS   : -242.724
 
 Type  : Slow 1200mV 85C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -3.848
-TNS   : -224.858
+Slack : -3.811
+TNS   : -231.705
 
 Type  : Slow 1200mV 85C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : 0.432
+Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'freq38K:U4|thirtyEightKHz'
@@ -27,16 +27,16 @@ Slack : 0.740
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'swSend'
-Slack : -2.725
-TNS   : -2.725
+Slack : -2.067
+TNS   : -2.067
 
 Type  : Slow 1200mV 85C Model Removal 'swSend'
-Slack : 3.140
+Slack : 2.512
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -101.142
+TNS   : -102.629
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
 Slack : -1.487
@@ -44,7 +44,7 @@ TNS   : -120.447
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
 Slack : -1.487
-TNS   : -114.499
+TNS   : -111.525
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
 Slack : -1.487
@@ -55,23 +55,23 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Slow 1200mV 0C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -4.799
-TNS   : -312.176
+Slack : -4.728
+TNS   : -331.322
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -4.147
-TNS   : -214.986
+Slack : -4.469
+TNS   : -224.029
 
 Type  : Slow 1200mV 0C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -3.552
-TNS   : -205.512
+Slack : -3.524
+TNS   : -212.300
 
 Type  : Slow 1200mV 0C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : 0.381
+Slack : 0.383
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'freq38K:U4|thirtyEightKHz'
-Slack : 0.403
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
@@ -79,16 +79,16 @@ Slack : 0.692
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'swSend'
-Slack : -2.372
-TNS   : -2.372
+Slack : -1.732
+TNS   : -1.732
 
 Type  : Slow 1200mV 0C Model Removal 'swSend'
-Slack : 2.863
+Slack : 2.271
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -101.142
+TNS   : -102.629
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
 Slack : -1.487
@@ -96,7 +96,7 @@ TNS   : -120.447
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
 Slack : -1.487
-TNS   : -114.499
+TNS   : -111.525
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
 Slack : -1.487
@@ -107,40 +107,40 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Fast 1200mV 0C Model Setup 'freq38K:U4|thirtyEightKHz'
-Slack : -1.598
-TNS   : -97.879
+Slack : -1.611
+TNS   : -110.371
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.340
-TNS   : -58.353
+Slack : -1.483
+TNS   : -59.099
 
 Type  : Fast 1200mV 0C Model Setup 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : -1.072
-TNS   : -52.024
+Slack : -1.049
+TNS   : -53.220
 
 Type  : Fast 1200mV 0C Model Hold 'adc_Controller:U6|freqADC:U1|adc_clock'
-Slack : 0.178
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'freq38K:U4|thirtyEightKHz'
-Slack : 0.186
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.265
+Slack : 0.296
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'swSend'
-Slack : -0.728
-TNS   : -0.728
+Slack : -0.442
+TNS   : -0.442
 
 Type  : Fast 1200mV 0C Model Removal 'swSend'
-Slack : 1.429
+Slack : 1.152
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -73.300
+TNS   : -74.351
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|freqADC:U1|adc_clock'
 Slack : -1.000
@@ -148,7 +148,7 @@ TNS   : -81.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freq38K:U4|thirtyEightKHz'
 Slack : -1.000
-TNS   : -77.000
+TNS   : -75.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_Controller:U6|adcFSM:U3|readData'
 Slack : -1.000
