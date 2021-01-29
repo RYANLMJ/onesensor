@@ -1,5 +1,5 @@
 
-State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|n_state
+State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|n_state
 Name n_state.reading n_state.done n_state.converting n_state.waiting n_state.starting n_state.idle 
 n_state.idle 0 0 0 0 0 0 
 n_state.starting 0 0 0 0 1 1 
@@ -8,7 +8,7 @@ n_state.converting 0 0 1 0 0 1
 n_state.done 0 1 0 0 0 1 
 n_state.reading 1 0 0 0 0 1 
 
-State Machine - |onesensor|adc_Controller:U16|adcFSM:U3|p_state
+State Machine - |tx_sys|adc_Controller:U6|adcFSM:U3|p_state
 Name p_state.reading p_state.done p_state.converting p_state.waiting p_state.starting p_state.idle 
 p_state.idle 0 0 0 0 0 0 
 p_state.starting 0 0 0 0 1 1 
